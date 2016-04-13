@@ -1,0 +1,19 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <p:dataTable id="empresasTable" value="" var="empresa"
+                 style="margin-top: 20px" emptyMessage="Nenhuma empresa encontrada." rows="20"
+                 paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
+        <p:column headerText="ID" style="text-align: center; width: 100px">
+            <h:outputText value="123" />
+        </p:column>
+        <p:column headerText="Empresa">
+            <h:outputText value="Bala de morango" />
+        </p:column>
+    </p:dataTable> 
+
+</ui:composition>

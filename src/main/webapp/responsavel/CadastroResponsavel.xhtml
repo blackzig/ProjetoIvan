@@ -1,0 +1,62 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="titulo">Novo Responsável</ui:define>
+
+    <ui:define name="corpo">
+        <h:form>
+            <h1>Novo Responsável</h1>
+
+            <p:toolbar style="margin-top: 20px">
+                <p:toolbarGroup>
+                    <p:button value="Novo" outcome="/responsavel/CadastroResponsavel"/>
+                    <p:commandButton value="Salvar" id="botaoSalvar"/>
+                </p:toolbarGroup>
+                <p:toolbarGroup align="right">
+                    <p:button value="Pesquisa" outcome="/responsavel/PesquisaResponsavel"/>
+                </p:toolbarGroup>
+            </p:toolbar>
+
+            <p:panelGrid columns="4" id="painel" style="width: 100%; margin-top: 20px"
+                         columnClasses="rotulo, campo, rotulo, campo">
+                <p:outputLabel value="ID Responsável" for="idResponsavel"/>
+                <p:inputText id="idResponsavel" size="20" maxlength="20" readonly="yes"/>
+
+                <p:outputLabel value="Nome" for="nome"/>
+                <p:inputText id="nome" size="60" maxlength="80"/>
+
+                <p:outputLabel value="Email Primário (Login)" for="emailPrimario"/>
+                <p:inputText id="emailPrimario" size="60" maxlength="80"/> 
+
+                <p:outputLabel value="Email Secundário" for="emailSecundario"/>
+                <p:inputText id="emailSecundario" size="60" maxlength="80"/> 
+
+                <p:outputLabel value="Telefone" for="telefone" />
+                <p:inputMask id="telefone" value="" 
+                             mask="(99) 9999-9999" />
+
+                <ui:include src="/WEB-INF/template/empresa/Empresa.xhtml" />
+
+                <p:outputLabel value="Cargo" for="cargo"/>
+                <p:inputText id="cargo" size="60" maxlength="80"/>
+            </p:panelGrid>
+        </h:form>
+        <p:separator style="margin-top: 20px"/>
+        <h:form>
+            <h1>Nova Empresa</h1>
+            <ui:include src="/WEB-INF/template/empresa/BotoesEmpresa.xhtml" />  
+            <p:panelGrid columns="2" id="painel" style="width: 100%; margin-top: 20px"
+                         columnClasses="rotulo, campo">              
+                <ui:include src="/WEB-INF/template/empresa/Empresa.xhtml" />
+            </p:panelGrid>
+            <p:separator style="margin-top: 20px"/>
+            <h1>Pesquisa Empresa</h1>
+            <ui:include src="/WEB-INF/template/empresa/PesquisaEmpresa.xhtml" />
+        </h:form>
+
+    </ui:define>
+</ui:composition>
