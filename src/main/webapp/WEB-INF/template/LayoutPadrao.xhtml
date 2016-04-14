@@ -25,11 +25,34 @@ and open the template in the editor.
             </f:facet>
         </p:ajaxStatus>
         <header>
-            <div>
-                <h:link>
+            <div style="float: left">
+                <h:link outcome="/Home">
                     <h:graphicImage library="images" name="logo.png" height="35" width="60" />
                 </h:link>
             </div>
+            <div style="float: left">
+                <h:link outcome="/Home">
+                    <h3 style="color: white">Sistema de Egressos</h3>
+                </h:link>
+            </div>
+
+            <div style="float: right; margin-right: 110px">
+                <span style="float: left; height: 30px; line-height: 30px; margin-right: 60px">
+                    Olá usuário!
+                </span>
+
+                <h:form style="display: inline-block">
+                    <p:menubar styleClass="menu-sistema">
+                        <p:submenu label="Cadastros">
+                            <p:menuitem value="Responsável" outcome="/responsavel/CadastroResponsavel"/>
+                            <p:menuitem value="Pesquisa Responsável" outcome="/responsavel/PesquisaResponsavel"/>
+                            <p:separator/>
+                        </p:submenu>
+                        <p:menuitem value="Sair" />
+                    </p:menubar>
+                </h:form>
+            </div>
+            <div style="clear: both"></div>
         </header>
         <div id="conteudo">
             <ui:insert name="corpo"/>
@@ -38,7 +61,7 @@ and open the template in the editor.
         <p:separator style="margin-top: 20px"/>
 
         <footer>
-            Sistema de Egresso desenvolvido por alunos da pós graduação -
+            Sistema de Egressos desenvolvido por alunos da pós graduação -
             <a href="http://latosensu.dc.ufscar.br/" target="_blank">Cursos de Especialização (Pós-Graduação Lato Sensu)</a>
         </footer>
     </h:body>

@@ -21,6 +21,13 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <!-- Weld (implementação do CDI) -->
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>2.3.3.Final</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- PrimeFaces (biblioteca de componentes) -->
         <dependency>
             <groupId>org.primefaces</groupId>
