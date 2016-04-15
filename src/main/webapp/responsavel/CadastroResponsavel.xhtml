@@ -39,7 +39,7 @@
                 <p:inputMask id="telefone" value="" 
                              mask="(99) 9999-9999" />
 
-                <ui:include src="/WEB-INF/template/empresa/Empresa.xhtml" />
+                <ui:include src="/WEB-INF/template/empresa/EmpresaMostrar.xhtml" />
 
                 <p:outputLabel value="Cargo" for="cargo"/>
                 <p:inputText id="cargo" size="60" maxlength="80"/>
@@ -51,7 +51,7 @@
             <ui:include src="/WEB-INF/template/empresa/BotoesEmpresa.xhtml" />  
             <p:panelGrid columns="2" id="painel" style="width: 100%; margin-top: 20px"
                          columnClasses="rotulo, campo">              
-                <ui:include src="/WEB-INF/template/empresa/Empresa.xhtml" />
+                <ui:include src="/WEB-INF/template/empresa/EmpresaCadastrar.xhtml" />
             </p:panelGrid>
             <p:separator style="margin-top: 20px"/>
             <h1>Pesquisa Empresa</h1>
